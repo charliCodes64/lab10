@@ -125,7 +125,7 @@ void sprite::drawSprite()
 		for (int i = 0; i < size; ++i) {
 			if (scale <= 0.5f) {//setting visable to false when to small
 				visable = false;
-				std::cout << "Sprite is to small";
+				//std::cout << "Sprite is to small";
 
 			}
 			if (visable == false || freeze > 0){//ignoring frozen sprite when its frozen so it want teleport again
@@ -145,17 +145,21 @@ void sprite::drawSprite()
 				if (posX && posY) {
 					if (effect == 1) { //scared
 						color = al_map_rgb(rand() % 255, rand() % 255, rand() % 255);
+						x = rand() % WIDTH;//teleport after any collision
+						y = rand() % HEIGHT;
 					}
 					else if (effect == 2) { //shrank
 						scale *= 0.9f;
+						x = rand() % WIDTH;//teleport after any collision
+						y = rand() % HEIGHT;
 					}
 					else if (effect == 3) { //freeze
-						freeze = 300;// 5 second freeze 300/60 = 5
+						freeze = 300;//5 second freeze 300/60 = 5
 						freezeX = x;
 						freezeY = y;
 					}
-					x = rand() % WIDTH;//teleport after any collision
-					y = rand() % HEIGHT;
+				//	x = rand() % WIDTH;//teleport after any collision
+				//	y = rand() % HEIGHT;
 				}
 			}
 		}

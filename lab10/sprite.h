@@ -11,7 +11,6 @@ public:
 	int getY() { return y; }
 	void collision(sprite sprites[], int size, int me, int WIDTH, int HEIGHT);
 	float scale = 0.9f;
-	//int prevx, prevy;
 	int effect;
 	bool visable = true; 
 

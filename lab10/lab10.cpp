@@ -6,7 +6,7 @@
 #include "Sprite.h"
 #include <iostream>
 using namespace std;
-
+//Charlton Infinger
 int main(void)
 {
 	//variables
@@ -29,9 +29,9 @@ int main(void)
 	if (!font24) {
 		al_show_native_message_box(NULL, NULL, "Error", "Can not load GoldenAge.ttf", NULL, 0);
 	}
-	if (!font24) {
-		std::cout << "Font is null!\n";
-	}
+	/*if (!font24) {
+		std::cout << "Font is not found!\n";
+	}*/
 
 	//program init
 	if (!al_init())										//initialize Allegro
@@ -55,7 +55,7 @@ int main(void)
 	for (int i = 0; i < 5; i++) {
 		image[i].load_animated_sprite(9, i);
 	}
-	std::cout << "try5" << std::endl;
+	//std::cout << "try5" << std::endl;
 
 	while (!done)
 	{
